@@ -10,18 +10,22 @@
   --background-color-primary: rgb(244, 225, 225);
   --background-color-nav: rgb(35, 39, 71);
   --color-primary:black;
+  --background-color-form:rgb(244, 244, 247);
 }
 
 [theme=Dark]{
   --background-color-primary: rgb(35, 39, 71);
   --background-color-nav: rgb(36, 37, 38);
   --color-primary: white;
+  --background-color-form:rgb(80, 84, 111);
+
 }
 
 
 .header{
   background-color:var(--background-color-primary);
-  height: 50rem;
+  height: 45rem;
+  filter: blur(0px);
   
   
 }
@@ -62,6 +66,8 @@ h2{
   font-size: 50px;
   background: transparent;
   color: var(--color-primary);
+  transition-duration: 1s;
+
   
 }
 .buttonS{
@@ -70,11 +76,23 @@ h2{
   border: none;
   cursor: pointer;
   font-size: 50px;
+  transition-duration: 1s;
+}
+
+.buttonL:hover{
+   transform: scale(1.05,1.05);
+  box-shadow: 0 0  12px black;
+
+}
+
+.buttonS:hover{
+  background-color: aliceblue;
+  transform: scale(1.1,1.1);
 
 }
 
 
-.Login{
+.Loginbutton{
   display: flex;
   gap: 10px;
   position: relative;
@@ -99,8 +117,9 @@ h2{
 .fashion{
   object-fit: cover;
   width: 50%;
-  aspect-ratio: 3/4;
-  height: 50rem;
+  aspect-ratio: 16/9;
+  height: 30rem;
+  object-position: center;
   
 }
 
@@ -118,11 +137,66 @@ body {
 .unleash
 {
   position: absolute;
-  top: 63rem;
+  top: 55rem;
   color: white;
   font-size: 10rem;
   
 }
 .FASHION{
   margin: 0px;
+}
+
+.LoginForm{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width:25rem;
+  background-color: var(--background-color-form);
+  padding: 0px 20px 20px 20px;
+  justify-content: center;
+  align-items:stretch;
+  border-radius: 30px;
+  position: fixed;
+  top:40%;
+  left: 35%;
+  z-index: 2;
+  opacity: 95%;
+}
+
+.headingL{
+  text-align: center;
+}
+
+.fa-sharp{
+  position: relative;
+  right:-95%;
+  top:30px;
+  margin: 0px;
+  cursor:pointer;
+}
+
+.fa-sharp:hover{
+  color: rgb(105, 103, 103);
+}
+h3{
+  margin: 0px;
+  font-size: 30px;
+  color:var(--color-primary);
+}
+.subButton{
+  border-radius: 15px;
+  cursor: pointer;
+  border: none;
+  padding: 10px;
+  font-size: 15px;
+  background-color: rgb(156, 160, 163);
+}
+.subButton:active{
+  background-color: rgb(248, 244, 244);
+}
+.textbox{
+  padding: 10px;
+  font-size: 15px;
+  border-radius: 5px;
+  border-width: 0.5px;
 }
