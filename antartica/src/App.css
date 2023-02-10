@@ -4,13 +4,15 @@
 
 .App{
   width:auto;
-  overflow: hidden;
+  
 }
 [theme=Light]{
   --background-color-primary: rgb(244, 225, 225);
   --background-color-nav: rgb(35, 39, 71);
   --color-primary:black;
   --background-color-form:rgb(244, 244, 247);
+  --background-color-body: #f3efef;
+
 }
 
 [theme=Dark]{
@@ -18,6 +20,7 @@
   --background-color-nav: rgb(36, 37, 38);
   --color-primary: white;
   --background-color-form:rgb(80, 84, 111);
+  --background-color-body: rgb(35, 39, 71);
 
 }
 
@@ -26,7 +29,8 @@
   background-color:var(--background-color-primary);
   height: 45rem;
   filter: blur(0px);
-  
+  overflow-x: hidden;
+
   
 }
 
@@ -34,11 +38,12 @@ h2{
   color:var(--color-primary);
   margin: 3px;
   font-family: 'Roboto', sans-serif;
-  font-size: 150px;
+  font-size: 15rem;
   text-align: center;
   position: relative;
-  top: 200px;
+  top: 120px;
   z-index: 1;
+  overflow: hidden;
 }
 
 .nav{
@@ -106,11 +111,11 @@ h2{
   position: absolute;
   top:33rem;
   right: -300px;
-  width: 20%;
-  height: 14rem;
+  width: 18%;
+  height: 12rem;
   background-blend-mode:screen;
   animation: cart 8s infinite 2s;
-  overflow: hidden;
+  
   
 }
 
@@ -120,6 +125,7 @@ h2{
   aspect-ratio: 16/9;
   height: 30rem;
   object-position: center;
+  filter: brightness(90%);
   
 }
 
@@ -130,20 +136,21 @@ h2{
   100%{
     transform: translateX(-600%);  }
 }
-body {
-  overflow-x: hidden;
-}
+
 
 .unleash
 {
-  position: absolute;
-  top: 55rem;
+  position: relative;
+  top: 0rem;
   color: white;
-  font-size: 10rem;
+  font-size: 8rem;
+  text-shadow: 5px 5px 10px #252525;
   
 }
 .FASHION{
   margin: 0px;
+  text-align: center;
+  justify-content: center;
 }
 
 .LoginForm{
@@ -156,11 +163,19 @@ body {
   justify-content: center;
   align-items:stretch;
   border-radius: 30px;
-  position: fixed;
+  position:fixed;
   top:40%;
   left: 35%;
   z-index: 2;
   opacity: 95%;
+  animation: enter 1s ;
+  
+  
+}
+@keyframes enter {
+  0%{
+    transform: translateY(-250%);
+  }
 }
 
 .headingL{
@@ -199,4 +214,56 @@ h3{
   font-size: 15px;
   border-radius: 5px;
   border-width: 0.5px;
+}
+.theBut{
+  position: absolute;
+  top:0px;
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  gap:10px;
+  padding: 10px;
+  box-shadow: 0 0 5px;
+  border-radius: 10px;
+  width: 200px;
+  margin-right: 0px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  cursor:pointer;
+}
+.des{
+  color: var(--color-primary);
+  text-align: center;
+}
+.catimg{
+  object-fit: cover;
+  aspect-ratio: 16/9;
+  border-radius: 10px;
+}
+.category::-webkit-scrollbar{
+  
+  visibility: hidden;
+  
+}
+.category{
+  margin-top: 100px;
+  margin: 0px;
+  padding: 10px;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+  overflow-x:scroll;
+
+}
+.body{
+  padding: 0px;
+  background-color: var(--background-color-body);
+}
+.trend{
+  position:absolute;
+  top:50rem;
+  font-size: 10rem;
+  color: white;
+  text-shadow: 5px 5px 10px #252525;
 }
