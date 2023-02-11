@@ -2,9 +2,9 @@ import logo from './logo.svg';
 import './App.css';
 import{useState} from "react";
 import {Nav,Category,Deal} from './components';
-import ScrollAnimation from 'react-animate-on-scroll';
-import "animate.css/animate.min.css";
-import Login from './Login';
+import{BrowserRouter,Routes,Route} from "react-router-dom";
+import {Login,Signup} from './Login';
+import Electronics from './category';
 
 
 
@@ -31,8 +31,9 @@ function App() {
 
   //for opening loginform
 
-  const[model,setModel]=useState(false)
-   
+  const[modelL,setModelL]=useState(false)
+  const[modelS,setModelS]=useState(false)
+
   
   return (
     <div className="App" theme={Theme}>
@@ -41,11 +42,12 @@ function App() {
       <Nav/>
       <h2>Antarctica</h2>
       <button className='theBut' onClick={()=>Click()}>theme</button>
-      <Login open={model} close={setModel}/>
+      <Login openL={modelL} closeL={setModelL}/>
+      <Signup openS={modelS} closeS={setModelS}/>
       <div className='Loginbutton'>
       
-      <button className="buttonL" onClick={()=>setModel(true)}>Login</button>
-      <button className="buttonS">Signup</button>
+      <button className="buttonL" onClick={()=>setModelL(true)}>Login</button>
+      <button className="buttonS"onClick={()=>setModelS(true)}>Signup</button>
       </div>
       <img className='image' src={link}/>
      </div>
@@ -58,6 +60,11 @@ function App() {
             <h2 className='trend'>Explore latest Technology</h2>
         </div>
         <Category/>
+        
+        <Routes>
+          <Route exact path="/electronics" element={<Electronics/>}/>
+        </Routes>
+        
         <Deal/>
         <div>
         <img className='mobile' src="https://images.samsung.com/in/smartphones/galaxy-s23/images/galaxy-s23-share-image.jpg"/>

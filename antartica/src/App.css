@@ -229,10 +229,12 @@ h3{
   margin-top: 50px;
   margin-bottom: 50px;
   cursor:pointer;
+  text-decoration: none;
 }
 .des{
   color: var(--color-primary);
   text-align: center;
+
 }
 .catimg{
   object-fit: cover;
@@ -252,7 +254,7 @@ h3{
   flex-wrap: nowrap;
   gap: 20px;
   overflow-x:scroll;
-
+  text-decoration: none;
 }
 .body{
   padding: 0px;
@@ -371,7 +373,9 @@ h3{
   
 }
 
-
+a{
+  text-decoration: none;
+}
 
 
 

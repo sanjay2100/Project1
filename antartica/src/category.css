@@ -1,0 +1,45 @@
+.descCategory{
+    text-align: center;
+    color: var(--color-primary);
+
+}
+.catul{
+    margin: 10px;
+    align-items: center;
+}
+.catli{
+    list-style: none;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px;
+    box-shadow: 0 0 2px;
+    margin: 10px;
+    width: 95%;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1.5rem;
+    align-items: stretch;
+    justify-content: space-between;
+}
+
+.catImg{
+    aspect-ratio: 3/4;
+    height: 4rem;
+
+    
+}
+
+.catli:hover{
+    background-color: rgb(180, 179, 179);
+}
+
+@media only screen and (max-width: 600px) {
+   ul{
+    position: relative;
+    left:-30px;
+   }
+   li{
+    align-content: center;
+   }
+}

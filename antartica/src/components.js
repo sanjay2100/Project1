@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 
 
@@ -17,10 +18,10 @@ const Nav=()=>{
 const Category=()=>{
     return(
         <div className='category'>
-      <div className='container'>
+      <Link to="/electronics"><div className='container'>
         <img className='catimg' src="https://images.pexels.com/photos/325153/pexels-photo-325153.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"/>
         <h3 className='des'>electronics</h3>
-      </div>
+      </div></Link>
       <div className='container'>
         <img className='catimg' src="https://images.pexels.com/photos/1536619/pexels-photo-1536619.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"/>
         <h3 className='des'>fashion</h3>
