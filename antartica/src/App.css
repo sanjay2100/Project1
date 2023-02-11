@@ -12,7 +12,7 @@
   --color-primary:black;
   --background-color-form:rgb(244, 244, 247);
   --background-color-body: #f3efef;
-
+  --background-color-cards:rgb(196, 194, 194) ;
 }
 
 [theme=Dark]{
@@ -21,6 +21,7 @@
   --color-primary: white;
   --background-color-form:rgb(80, 84, 111);
   --background-color-body: rgb(35, 39, 71);
+  --background-color-cards:rgb(61, 73, 107) ;
 
 }
 
@@ -222,7 +223,6 @@ h3{
   flex-direction: column;
   gap:10px;
   padding: 10px;
-  box-shadow: 0 0 5px;
   border-radius: 10px;
   width: 200px;
   margin-right: 0px;
@@ -230,6 +230,8 @@ h3{
   margin-bottom: 50px;
   cursor:pointer;
   text-decoration: none;
+  background-color: var(--background-color-cards);
+  box-shadow: 0 0 5px black;
 }
 .des{
   color: var(--color-primary);
@@ -375,6 +377,8 @@ h3{
 
 a{
   text-decoration: none;
+  border: none;
+  outline: none;
 }
 
 
