@@ -1,6 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Roboto&display=swap');
 
 .App{
   width:auto;
@@ -115,8 +115,7 @@ h2{
   height: 12rem;
   background-blend-mode:screen;
   animation: cart 8s infinite 2s;
-  
-  
+   
 }
 
 .fashion{
@@ -145,7 +144,6 @@ h2{
   color: white;
   font-size: 8rem;
   text-shadow: 5px 5px 10px #252525;
-  
 }
 .FASHION{
   margin: 0px;
@@ -266,4 +264,200 @@ h3{
   font-size: 10rem;
   color: white;
   text-shadow: 5px 5px 10px #252525;
+}
+.dealDay{
+  position:relative;
+  top:0rem;
+  background-color: var(--background-color-body);
+  margin-top: 0px;
+  display: grid;
+  gap:5px;
+  grid-template-columns: repeat(4,1fr);
+
+}
+.subhead{
+  color:var(--color-primary);
+  position: relative;
+  margin: 5px;
+  font-family: 'Roboto', sans-serif;
+}
+.dealBox1{
+  display: flex;
+  flex-direction: column;
+  gap:10px;
+  padding: 10px;
+  box-shadow: 0 0 5px;
+  border-radius: 10px;
+  grid-column-start: 1;
+  grid-template-columns: 2;
+  margin-right: 0px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  cursor:pointer;
+  
+}
+.dealBox2{
+  display: flex;
+  flex-direction: column;
+  gap:10px;
+  padding: 10px;
+  box-shadow: 0 0 5px;
+  border-radius: 10px;
+  grid-column-start: 2;
+  grid-template-columns: 3;
+  margin-right: 0px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  cursor:pointer;
+  
+}
+.dealBox3{
+  display: flex;
+  flex-direction: column;
+  gap:10px;
+  padding: 10px;
+  box-shadow: 0 0 5px;
+  border-radius: 10px;
+  grid-column-start: 3;
+  grid-template-columns: 4;
+  margin-right: 0px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  cursor:pointer;
+  
+}
+.dealBox4{
+  display: flex;
+  flex-direction: column;
+  gap:10px;
+  padding: 10px;
+  box-shadow: 0 0 5px;
+  border-radius: 10px;
+  grid-column-start: 4;
+  grid-template-columns: 5;
+  margin-right: 0px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  cursor:pointer;
+  
+}
+.dealImg{
+  object-fit: cover;
+  aspect-ratio: 16/9;
+  border-radius: 10px;
+  width: 100%;
+}
+.dealDesc{
+  font-size: 15px;
+  text-align: left;
+  margin: 0px;
+  padding: 0px;
+  object-fit: contain;
+}
+
+.mobile{
+  object-fit: cover;
+  width: 100%;
+  height: 30rem;
+}
+.mobiledesc{
+  text-align: right;
+  position:absolute;
+  top:146.5rem;
+  right: 10px;
+  backdrop-filter:blur(10px) ;
+  padding: 3px;
+  font-family: 'Poppins', sans-serif;
+  
+}
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+  h2{
+    color:var(--color-primary);
+    margin: 3px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 5rem;
+    text-align: center;
+    position: relative;
+    top: 140px;
+    z-index: 1;
+    overflow: hidden;
+  }
+  .trend{
+    position:absolute;
+    top:46rem;
+    font-size: 2rem;
+    color: white;
+    text-shadow: 2px 2px 7px #252525;
+  }
+  .fashion{
+    object-fit: cover;
+    width: 50%;
+    aspect-ratio: 16/9;
+    height: 15rem;
+    object-position: center;
+    filter: brightness(90%);
+    
+  }
+  .header{
+    background-color:var(--background-color-primary);
+    height: 40rem;
+    filter: blur(0px);
+    overflow-x: hidden;
+  
+  }
+  .LoginForm{
+    width:18rem;
+    top:40%;
+    left: 6%;
+  }
+  .image{
+    aspect-ratio: 3/4;
+    position: absolute;
+    top:30rem;
+    right: -10px;
+    width: 18%;
+    height: 10rem;
+    background-blend-mode:screen;
+    animation: cart 8s infinite 2s;
+     
+  }
+  .dealDay{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0px;
+    margin: 0px;
+  
+  }
+  .dealBox1{
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+  .dealBox2{
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+  .dealBox3{
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+  .dealBox4{
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+  .mobile{
+    height:10rem;
+    margin-top: 10px;
+  }
+.mobiledesc{
+  font-size: 1rem;
+  top:151rem;
+  right: 10px;
+}
+  
 }

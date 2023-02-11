@@ -61,4 +61,31 @@ const Category=()=>{
     )
 }
 
-export  {Nav,Category}
+const Deal=()=>{
+  return(
+      <div>
+      <h1 className="subhead">Deals of the day</h1>
+      <div className="dealDay">
+          <div className="dealBox1">
+            <img className="dealImg" src="https://assets.ajio.com/medias/sys_master/root/20220511/irm1/627b43c6f997dd03e2a557c4/-473Wx593H-461340286-multi-MODEL.jpg"/>
+            <h3 className="dealDesc">Buy 3 Tshirts for $10</h3>
+          </div>
+          <div className="dealBox2">
+            <img className="dealImg" src="https://images.pexels.com/photos/6243777/pexels-photo-6243777.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"/>
+            <h3 className="dealDesc">Buy Kitchen Set for $5</h3>
+          </div>
+          <div className="dealBox3">
+            <img className="dealImg" src="https://images.pexels.com/photos/3657154/pexels-photo-3657154.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"/>
+            <h3 className="dealDesc">Buy cricket kit for $30</h3>
+          </div>
+          <div className="dealBox4">
+            <img className="dealImg" src="https://images.pexels.com/photos/4887154/pexels-photo-4887154.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"/>
+            <h3 className="dealDesc">Buy Lego toys for $5</h3>
+          </div>
+      </div>
+      </div>
+      
+  )
+}
+
+export  {Nav,Category,Deal}
