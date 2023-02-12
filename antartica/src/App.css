@@ -246,6 +246,7 @@ h3{
 .category::-webkit-scrollbar{
   
   visibility: hidden;
+  display: none;
   
 }
 .category{
