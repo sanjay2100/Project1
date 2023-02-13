@@ -4,7 +4,7 @@ import{useState} from "react";
 import {Nav,Category,Deal} from './components';
 import{BrowserRouter,Routes,Route} from "react-router-dom";
 import {Login,Signup} from './Login';
-import Electronics from './category';
+import {Electronics,Fashion,Decoration,Grocery,Gardening,Toys,Sports,Stationary,Spares,Medicine,Mobile} from "./category";
 
 
 
@@ -53,6 +53,7 @@ function App() {
      </div>
      
      
+
      <div id='body' className='body'>
         <div className='FASHION'>
             <img className='fashion' src='https://www.apple.com/newsroom/images/product/iphone/standard/Apple-iPhone-14-iPhone-14-Plus-hero-220907_Full-Bleed-Image.jpg.large.jpg'/>
@@ -63,7 +64,19 @@ function App() {
         
         <Routes>
           <Route exact path="/electronics" element={<Electronics/>}/>
-        </Routes>
+            <Route path="/mobile" element={<Mobile/>}/>
+
+          <Route exact path="/fashion" element={<Fashion/>}/>
+          <Route exact path="/Decoration" element={<Decoration/>}/>
+          <Route exact path="/Grocery" element={<Grocery/>}/>
+          <Route exact path="/Gardening" element={<Gardening/>}/>
+          <Route exact path="/Toys" element={<Toys/>}/>
+          <Route exact path="/Sports" element={<Sports/>}/>
+          <Route exact path="/Stationary" element={<Stationary/>}/>
+          <Route exact path="/Spares" element={<Spares/>}/>
+          <Route exact path="/Medicine" element={<Medicine/>}/>
+ 
+          </Routes>      
         
         <Deal/>
         <div>
@@ -72,6 +85,7 @@ function App() {
         </div>
      </div>
     </div>
+    
   );
 }
 

@@ -12,7 +12,7 @@
   --color-primary:black;
   --background-color-form:rgb(244, 244, 247);
   --background-color-body: #f3efef;
-  --background-color-cards:rgb(196, 194, 194) ;
+  --background-color-cards:rgb(219, 215, 215) ;
 }
 
 [theme=Dark]{
@@ -367,12 +367,13 @@ h3{
 }
 .mobiledesc{
   text-align: right;
-  position:absolute;
-  top:146.5rem;
+  position:relative;
+  top:-2.3rem;
   right: 10px;
   backdrop-filter:blur(10px) ;
   padding: 3px;
   font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
   
 }
 

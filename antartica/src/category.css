@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro&family=Quicksand&display=swap');
 .descCategory{
     text-align: center;
     color: var(--color-primary);
@@ -35,6 +36,80 @@
 
 .catli:hover{
     background-color: rgb(66, 68, 130);
+}
+
+
+
+
+.subcat{
+    padding:10px;
+    margin:10px;
+    text-align: center;
+    box-shadow: 0 0 3px black;
+    border-radius: 10px;
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+    animation: subcat 400ms ease-in;
+    
+}
+@keyframes subcat {
+    0%{
+        transform: scale(0.99,0.99);opacity: 0%;
+    }
+    100%{
+        transform: scale(1,1);opacity: 100%;
+    }
+    
+}
+
+
+.heading{
+    text-align: center;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    align-items: center;
+    background-color: var(--background-color-cards);
+    border-radius: 10px;
+    width:300px;
+    gap:5px;
+    
+}
+.subImg{
+    aspect-ratio: 3/4;
+    width:50%;
+    height:200px;
+    object-fit: cover;
+}
+.itemName{
+    font-size: 20px;
+    text-align: left;
+    color: var(--color-primary);
+    font-family: 'Maven Pro', sans-serif;
+
+}
+.button{
+    display: flex;
+    gap:5px;
+}
+.insideButton:last-child{
+    background-color: rgb(139, 182, 222);
+}
+.insideButton{
+    border-radius: 5px;
+    border: none;
+    padding: 3px 5px 3px 5px;
+    cursor:pointer;
+}
+.insideButton:hover{
+    background-color: rgb(167, 165, 165);
+}
+.insideButton:active{
+    background-color: grey;
 }
 
 @media only screen and (max-width: 600px) {

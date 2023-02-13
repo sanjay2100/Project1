@@ -2,18 +2,37 @@ import React, { useState } from "react";
 
 
 
-const Login =({openL,closeL})=>{
+const Login =({openL,closeL,async})=>{
+const [LoginId,setLoginId]=useState('')
+const [Pwd,setPwd]=useState('')
+async function loginUser(e){
+    e.preventDefault()
+    
+   const response= await fetch('http://localhost:3001/api/login',{
+    method:'POST',
+    headers:{
+        'Content-Type':'application/json',
+    },
+    body:JSON.stringify({
+        LoginId,
+        Pwd,
+    })
+})
+
+const data=await response.json() 
+  console.log(data)
+}
 
     if(!openL) return null
     
    return (
             
-            <form action="/login" method="post">
+            <form onSubmit={loginUser}>
             <div className="LoginForm" >
                 <i class="fa-sharp fa-solid fa-circle-xmark" onClick={()=>closeL(false)}></i>
                 <h3 className="headingL">LOGIN</h3>
-            <input className="textbox" name="LoginId" type="text"  placeholder="Enter your Login Id"/>
-            <input className="textbox" name="pwd" type="password"  placeholder="Enter your Password"/>
+            <input className="textbox" name={LoginId} type="text" onChange={(e)=>setLoginId(e.target.value)} placeholder="Enter your Login Id"/>
+            <input className="textbox" name={Pwd} type="password" onChange={(e)=>setLoginId(e.target.value)} placeholder="Enter your Password"/>
             <button className="subButton">Submit</button>
             
             
@@ -21,6 +40,15 @@ const Login =({openL,closeL})=>{
              </form>)
     
 }
+
+
+
+
+
+
+
+
+
 const Signup =({openS,closeS})=>{
 
 const[loginId,setloginId]=useState("")
