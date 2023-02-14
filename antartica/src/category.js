@@ -5,9 +5,13 @@ import{BrowserRouter,Routes,Route} from "react-router-dom";
 
 
 
-
-
-
+var item=document.querySelectorAll(".itemName")
+var button=document.querySelectorAll(".insideButton")
+for (var i=0;i<button.length;i++){
+    button[i].addEventListener("click", console.log(item[i])
+    )
+    
+}
 
 
 const Electronics=()=>{
@@ -307,7 +311,7 @@ const Electronics=()=>{
                         <h3 className="itemName">Samsung galaxy s23 ultra</h3>
                         <div className="button">
                             <button className="insideButton">View Details</button>
-                            <button className="insideButton">Add to cart</button>
+                            <button className="insideButton1">Add to cart</button>
                         </div>
                         </div ></li>
 
@@ -316,7 +320,7 @@ const Electronics=()=>{
                         <h3 className="itemName">iPhone 14 Pro</h3>
                         <div className="button">
                             <button className="insideButton">View Details</button>
-                            <button className="insideButton">Add to cart</button>
+                            <button className="insideButton1">Add to cart</button>
                         </div>
                     </div></li>
                     <li><div className="card">
@@ -324,7 +328,7 @@ const Electronics=()=>{
                         <h3 className="itemName">Onepluse 11 pro</h3>
                         <div className="button">
                             <button className="insideButton">View Details</button>
-                            <button className="insideButton">Add to cart</button>
+                            <button className="insideButton1">Add to cart</button>
                         </div>
                     </div></li>
                     <li><div className="card">
@@ -332,7 +336,7 @@ const Electronics=()=>{
                         <h3 className="itemName">Onepluse norde CE</h3>
                         <div className="button">
                             <button className="insideButton">View Details</button>
-                            <button className="insideButton">Add to cart</button>
+                            <button className="insideButton1">Add to cart</button>
                         </div>
                     </div></li>
                     <li><div className="card">
@@ -340,7 +344,7 @@ const Electronics=()=>{
                         <h3 className="itemName">Realme note 9 pro max</h3>
                         <div className="button">
                             <button className="insideButton">View Details</button>
-                            <button className="insideButton">Add to cart</button>
+                            <button className="insideButton1">Add to cart</button>
                         </div>
                     </div></li>
                     <li><div className="card">
@@ -348,7 +352,7 @@ const Electronics=()=>{
                         <h3 className="itemName">Google pixel 6 pro</h3>
                         <div className="button">
                             <button className="insideButton">View Details</button>
-                            <button className="insideButton">Add to cart</button>
+                            <button className="insideButton1">Add to cart</button>
                         </div>
                     </div></li>
                     <li><div className="card">
@@ -356,7 +360,7 @@ const Electronics=()=>{
                         <h3 className="itemName">Motarola g72</h3>
                         <div className="button">
                             <button className="insideButton">View Details</button>
-                            <button className="insideButton">Add to cart</button>
+                            <button className="insideButton1">Add to cart</button>
                         </div>
                     </div></li>
                     <li><div className="card">
@@ -364,7 +368,7 @@ const Electronics=()=>{
                         <h3 className="itemName">Nothing Phone 1</h3>
                         <div className="button">
                             <button className="insideButton">View Details</button>
-                            <button className="insideButton">Add to cart</button>
+                            <button className="insideButton1">Add to cart</button>
                         </div>
                     </div></li>
                     <li><div className="card">
@@ -372,7 +376,7 @@ const Electronics=()=>{
                         <h3 className="itemName">Nokia 3310</h3>
                         <div className="button">
                             <button className="insideButton">View Details</button>
-                            <button className="insideButton">Add to cart</button>
+                            <button className="insideButton1">Add to cart</button>
                         </div>
                     </div></li>
                     <li><div className="card">
@@ -380,7 +384,7 @@ const Electronics=()=>{
                         <h3 className="itemName">Sony xeperia 1 IV</h3>
                         <div className="button">
                             <button className="insideButton">View Details</button>
-                            <button className="insideButton">Add to cart</button>
+                            <button className="insideButton1">Add to cart</button>
                         </div>
                     </div></li>
                     <li><div className="card">
@@ -388,7 +392,7 @@ const Electronics=()=>{
                         <h3 className="itemName">iPhone 13</h3>
                         <div className="button">
                             <button className="insideButton">View Details</button>
-                            <button className="insideButton">Add to cart</button>
+                            <button className="insideButton1">Add to cart</button>
                         </div>
                     </div></li>
                     <li><div className="card">
@@ -396,7 +400,7 @@ const Electronics=()=>{
                         <h3 className="itemName">Google pixel 6</h3>
                         <div className="button">
                             <button className="insideButton">View Details</button>
-                            <button className="insideButton">Add to cart</button>
+                            <button className="insideButton1">Add to cart</button>
                         </div>
                     </div></li>
                     <li><div className="card">
@@ -404,7 +408,7 @@ const Electronics=()=>{
                         <h3 className="itemName">Poco 4x pro</h3>
                         <div className="button">
                             <button className="insideButton">View Details</button>
-                            <button className="insideButton">Add to cart</button>
+                            <button className="insideButton1">Add to cart</button>
                         </div>
                     </div></li>
                     <li><div className="card">
@@ -412,7 +416,7 @@ const Electronics=()=>{
                         <h3 className="itemName">Samsung M53</h3>
                         <div className="button">
                             <button className="insideButton">View Details</button>
-                            <button className="insideButton">Add to cart</button>
+                            <button className="insideButton1">Add to cart</button>
                         </div>
                     </div></li>
                     <li><div className="card">
@@ -420,7 +424,7 @@ const Electronics=()=>{
                         <h3 className="itemName">Samsung z flip</h3>
                         <div className="button">
                             <button className="insideButton">View Details</button>
-                            <button className="insideButton">Add to cart</button>
+                            <button className="insideButton1">Add to cart</button>
                         </div>
                     </div></li>
                     <li><div className="card">
@@ -428,12 +432,14 @@ const Electronics=()=>{
                         <h3 className="itemName">Redme note 11</h3>
                         <div className="button">
                             <button className="insideButton">View Details</button>
-                            <button className="insideButton">Add to cart</button>
+                            <button className="insideButton1">Add to cart</button>
                         </div>
                     </div></li>
                 </div></ul>
                 </div>
+                
             )
+            
         }
 
         export {Electronics,Fashion,Decoration,Grocery,Gardening,Toys,Sports,Stationary,Spares,Medicine,Mobile}

@@ -99,14 +99,20 @@ li{
     display: flex;
     gap:5px;
 }
-.insideButton:last-child{
-    background-color: rgb(139, 182, 222);
-}
+
 .insideButton{
     border-radius: 5px;
     border: none;
     padding: 3px 5px 3px 5px;
     cursor:pointer;
+}
+.insideButton1{
+    border-radius: 5px;
+    border: none;
+    padding: 3px 5px 3px 5px;
+    cursor:pointer;
+    background-color: rgb(139, 182, 222);
+
 }
 .insideButton:hover{
     background-color: rgb(167, 165, 165);
