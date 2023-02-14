@@ -4,14 +4,20 @@ import { Link } from "react-router-dom";
 import{BrowserRouter,Routes,Route} from "react-router-dom";
 
 
-
 var item=document.querySelectorAll(".itemName")
-var button=document.querySelectorAll(".insideButton")
-for (var i=0;i<button.length;i++){
-    button[i].addEventListener("click", console.log(item[i])
-    )
-    
+var button=document.querySelectorAll(".insideButton1")
+for(var i=0;i<item.length;++i)
+{
+    console.clear()
+    console.log(item[i].innerHTML)
 }
+
+
+        
+    
+    
+    
+
 
 
 const Electronics=()=>{
