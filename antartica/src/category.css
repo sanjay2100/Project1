@@ -54,6 +54,9 @@
     animation: subcat 400ms ease-in;
     
 }
+li{
+    list-style: none;
+}
 @keyframes subcat {
     0%{
         transform: scale(0.99,0.99);opacity: 0%;
