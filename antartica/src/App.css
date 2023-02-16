@@ -16,12 +16,12 @@
 }
 
 [theme=Dark]{
-  --background-color-primary: rgb(35, 39, 71);
+  --background-color-primary: rgb(45, 46, 52);
   --background-color-nav: rgb(36, 37, 38);
   --color-primary: white;
   --background-color-form:rgb(80, 84, 111);
-  --background-color-body: rgb(35, 39, 71);
-  --background-color-cards:rgb(61, 73, 107) ;
+  --background-color-body: rgb(64, 65, 70);
+  --background-color-cards:rgb(103, 105, 109) ;
 
 }
 
@@ -50,13 +50,15 @@ h2{
 .nav{
   background-color: var(--background-color-nav);
   margin: 0px;
-
+  display:flex;
+  justify-content: space-between;
 }
 .navlist{
   display: flex;
   flex-direction: row;
   list-style: none;
-  justify-content: end;
+  justify-content: flex-end;
+
   gap: 20px;
   padding: 12px;
   margin: 0px;
@@ -171,6 +173,15 @@ h2{
   
   
 }
+
+.fa-bars{
+  position: relative;
+  top:0rem;
+  font-size: 30px;
+  margin: 10px;
+  color: white;
+}
+
 @keyframes enter {
   0%{
     transform: translateY(-250%);
@@ -215,8 +226,7 @@ h3{
   border-width: 0.5px;
 }
 .theBut{
-  position: absolute;
-  top:0px;
+  position: relative;
 }
 .container{
   display: flex;
@@ -384,6 +394,9 @@ a{
 }
 
 
+.naveItem{
+  cursor: pointer;
+}
 
 @media only screen and (max-width: 600px) {
   h2{

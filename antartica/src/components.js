@@ -1,20 +1,14 @@
 import React from "react";
 import { BrowserRouter, Link } from "react-router-dom";
+import{useState} from "react";
 
 
 
-const Nav=()=>{
-    return(
-        <div className="nav">
-            <ul className="navlist">
-                <li>Whats New</li>
-                <li>join us</li>
-                <li>About us</li>
 
-            </ul>
-        </div>
-    )
-}
+
+
+
+
 const Category=()=>{
     return(
       <div className='category'>
@@ -90,4 +84,6 @@ const Deal=()=>{
   )
 }
 
-export  {Nav,Category,Deal}
+
+
+export  {Category,Deal}

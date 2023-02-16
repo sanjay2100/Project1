@@ -120,6 +120,65 @@ li{
 .insideButton:active{
     background-color: grey;
 }
+.insideButton1:active{
+    background-color: grey;
+}
+
+.cartname{
+    position: relative;
+    top: 0px;
+    text-align: center;
+}
+
+.cartDiv{
+    list-style: none;
+    position:fixed;
+    z-index: 2;
+    top:10rem;
+    right:0;
+    display:none;
+    flex-direction: column;
+    background-color: var(--background-color-form);
+    padding:20px;
+    overflow-y: scroll;
+    height:20rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    width: 300px;
+    filter: blur(10%);
+    opacity: 90%;
+    
+  }
+
+  .cartitem{
+    padding:10px;
+    box-shadow: 0 0 2px;
+    text-align: left;
+    gap:10px;
+  }
+
+  .bar{
+    position: fixed;
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    top:0px;
+    left:0%;
+    width:300px;
+    z-index: 1;
+    background-color: var(--background-color-cards);
+    border-radius: 0px 20px 20px 0px;
+    box-shadow: 0 0 2px black;
+  }
+  .barul{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: left;
+  }
+
+
 
 @media only screen and (max-width: 600px) {
    ul{
