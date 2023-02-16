@@ -7,28 +7,33 @@
   
 }
 [theme=Light]{
-  --background-color-primary: rgb(244, 225, 225);
+  --background-image-primary:linear-gradient(to right ,rgb(156, 245, 152),rgb(204, 238, 111));
   --background-color-nav: rgb(35, 39, 71);
   --color-primary:black;
   --background-color-form:rgb(244, 244, 247);
-  --background-color-body: #f3efef;
-  --background-color-cards:rgb(219, 215, 215) ;
+  --background-color-body: #ffffff;
+  --background-color-cards:rgb(180, 177, 177);
+  --background-color-corosel:rgb(246, 243, 243);
+  --background-color-details:rgb(246, 243, 243);
+
 }
 
 [theme=Dark]{
-  --background-color-primary: rgb(45, 46, 52);
+  --background-image-primary:linear-gradient(to right ,rgb(235, 157, 235),rgb(127, 127, 235));
   --background-color-nav: rgb(36, 37, 38);
   --color-primary: white;
   --background-color-form:rgb(80, 84, 111);
   --background-color-body: rgb(64, 65, 70);
   --background-color-cards:rgb(103, 105, 109) ;
+  --background-color-corosel:rgb(48, 47, 47);
+  --background-color-details:rgb(141, 139, 139);
 
 }
 
 
 .header{
-  background-color:var(--background-color-primary);
-  height: 45rem;
+  background-image:var(--background-image-primary);
+  height: 30rem;
   filter: blur(0px);
   overflow-x: hidden;
 
@@ -39,7 +44,7 @@ h2{
   color:var(--color-primary);
   margin: 3px;
   font-family: 'Roboto', sans-serif;
-  font-size: 15rem;
+  font-size: 10rem;
   text-align: center;
   position: relative;
   top: 120px;
@@ -58,7 +63,6 @@ h2{
   flex-direction: row;
   list-style: none;
   justify-content: flex-end;
-
   gap: 20px;
   padding: 12px;
   margin: 0px;
@@ -66,12 +70,12 @@ h2{
 }
 
 .buttonL{
-  padding: 4px,5px,5px,4px;
+  padding: 10px;
   border-radius: 20px;
-  border-color: rgb(250, 251, 252);
+  border-color: rgb(53, 59, 63);
   border-width: 1px;
   cursor: pointer;
-  font-size: 50px;
+  font-size: 30px;
   background: transparent;
   color: var(--color-primary);
   transition-duration: 1s;
@@ -79,11 +83,11 @@ h2{
   
 }
 .buttonS{
-  padding: 5px,10px,5px,5px;
+  padding: 10px;
   border-radius: 20px;
   border: none;
   cursor: pointer;
-  font-size: 50px;
+  font-size: 30px;
   transition-duration: 1s;
 }
 
@@ -104,15 +108,15 @@ h2{
   display: flex;
   gap: 10px;
   position: relative;
-  top:15rem;
-  justify-content: center;
+  top:10rem;
+  justify-content: right;
   z-index: 1;
-  margin: 0px;
+  margin-right: 10px;
 }
 .image{
   aspect-ratio: 3/4;
   position: absolute;
-  top:33rem;
+  top:18rem;
   right: -300px;
   width: 18%;
   height: 12rem;
@@ -167,7 +171,7 @@ h2{
   position:fixed;
   top:40%;
   left: 35%;
-  z-index: 2;
+  z-index: 3;
   opacity: 95%;
   animation: enter 1s ;
   
@@ -275,7 +279,7 @@ h3{
 }
 .trend{
   position:absolute;
-  top:50rem;
+  top:35rem;
   font-size: 10rem;
   color: white;
   text-shadow: 5px 5px 10px #252525;
@@ -403,16 +407,25 @@ a{
     color:var(--color-primary);
     margin: 3px;
     font-family: 'Roboto', sans-serif;
-    font-size: 5rem;
+    font-size: 3rem;
     text-align: center;
     position: relative;
-    top: 140px;
+    top: 10px;
     z-index: 1;
     overflow: hidden;
   }
+  .Loginbutton{
+    display: flex;
+    gap: 10px;
+    position: relative;
+    top:1.8rem;
+    justify-content: center;
+    z-index: 1;
+    margin: 0px;
+  }
   .trend{
     position:absolute;
-    top:46rem;
+    top:18rem;
     font-size: 2rem;
     color: white;
     text-shadow: 2px 2px 7px #252525;
@@ -428,7 +441,7 @@ a{
   }
   .header{
     background-color:var(--background-color-primary);
-    height: 40rem;
+    height: 10rem;
     filter: blur(0px);
     overflow-x: hidden;
   
@@ -438,13 +451,19 @@ a{
     top:40%;
     left: 6%;
   }
+  .buttonS{
+    font-size: 20px;
+  }
+  .buttonL{
+    font-size: 20px;
+  }
   .image{
     aspect-ratio: 3/4;
     position: absolute;
-    top:30rem;
+    top:4.7rem;
     right: -10px;
     width: 18%;
-    height: 10rem;
+    height: 5rem;
     background-blend-mode:screen;
     animation: cart 8s infinite 2s;
      

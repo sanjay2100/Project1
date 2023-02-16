@@ -1,8 +1,8 @@
 import React from "react";
 import{useState} from "react";
-
 import Click from './App'
-
+import changeState from './App'
+import Details1 from './details';
 //cart design
 const Cart=()=>{
 
@@ -16,6 +16,7 @@ const Cart=()=>{
 
 //nav bar
      const Nav=()=>{
+        
         return(
             <div className="nav">
                 <i class="fa-solid fa-bars" onClick={openSidebar}></i>
@@ -56,10 +57,16 @@ const closeSidebar=()=>{
 
 
 const Mobile=()=>{
-    return (
-        
+    
+const [Detail,setDetail]=useState(false)
+if(Detail==='true'){
+    document.querySelector(".App").style.overflow="hidden";
+}
+    
+    return ( 
+           
         <div>
-            
+        <Details1 openD={Detail} closeD={setDetail} />
         <h3 className="heading">Mobile</h3>
         <ul>
         <div className="subcat">
@@ -67,7 +74,7 @@ const Mobile=()=>{
                 <img className="subImg" src="https://images.samsung.com/in/smartphones/galaxy-s23-ultra/images/galaxy-s23-ultra-highlights-colors-phantom-black-back-s.jpg"/>
                 <h3 className="itemName">Samsung galaxy s23 ultra</h3>
                 <div className="button">
-                    <button className="insideButton">View Details</button>
+                    <button className="insideButton" onClick={()=>setDetail(true)} >View Details</button>
                     <button className="insideButton1" onClick={addtoCart}>Add to cart</button>
                 </div>
                 </div ></li>
@@ -218,4 +225,4 @@ function addtoCart(event) {
     ul.appendChild(li)
 }
 
-export {Mobile,Cart,openCart,Nav}
+export {Mobile,Cart,openCart,Nav,addtoCart}

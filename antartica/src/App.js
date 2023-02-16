@@ -5,9 +5,8 @@ import {Category,Deal} from './components';
 import{BrowserRouter,Routes,Route} from "react-router-dom";
 import {Login,Signup} from './Login';
 import {Electronics,Fashion,Decoration,Grocery,Gardening,Toys,Sports,Stationary,Spares,Medicine} from "./category";
-
+import Corosel from './corosel';
 import {Mobile,Cart,Nav,SideBar} from "./productdetails";
-
 
 
 
@@ -38,7 +37,6 @@ function App() {
 
   const[modelL,setModelL]=useState(false)
   const[modelS,setModelS]=useState(false)
-
   const SideBar=()=>{
           
     return (<div className="bar">
@@ -49,19 +47,18 @@ function App() {
      </div>)
  }
     
-  
-
+ 
   
   return (
     <div className="App" theme={Theme}>
     <Nav/>
     <SideBar/>
+    <Login openL={modelL} closeL={setModelL}/>
+    <Signup openS={modelS} closeS={setModelS}/>
+
      <div className="header" id='head'>
       <h2>Antarctica</h2>
-      <Login openL={modelL} closeL={setModelL}/>
-      <Signup openS={modelS} closeS={setModelS}/>
       <div className='Loginbutton'>
-      
       <button className="buttonL" onClick={()=>setModelL(true)}>Login</button>
       <button className="buttonS"onClick={()=>setModelS(true)}>Signup</button>
       </div>
@@ -95,10 +92,11 @@ function App() {
  
           </Routes>      
         
+        
+        <Corosel/>
         <Deal/>
         <div>
-        <img className='mobile' src="https://images.samsung.com/in/smartphones/galaxy-s23/images/galaxy-s23-share-image.jpg"/>
-        <h3 className='mobiledesc'>The new Samsung galaxy s23</h3>
+        
         </div>
      </div>
     </div>

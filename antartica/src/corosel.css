@@ -1,0 +1,157 @@
+.coroselcontainer{
+    display: flex;
+    flex-direction: row;
+    background-color: var(--background-color-corosel);
+    padding: 0px;
+    overflow-x:scroll;
+    
+    
+}
+.coroselcontainer::-webkit-scrollbar{
+    visibility: hidden;
+}
+
+.coroselIn{
+    padding: 0px;
+    width: 30rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+
+.corolselimg{
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    height: 10rem; 
+     
+}
+.corolseldesc{
+    font-size: 1rem;
+    color: var(--color-primary);
+    position: relative;
+    background: none;
+    backdrop-filter: blur(3px);
+    align-items: center;
+}
+
+.arrow{
+    display: flex;
+    background-color: aliceblue;
+    align-items: center;
+    padding: 0px;
+    
+}
+.arrowdesc{
+    background-image:var(--background-image-primary);
+    padding: 2rem 0rem 1.8rem 0.6rem ;
+    font-size: 1.9rem;
+    font-family: 'Noto Sans', sans-serif;
+    text-align: left;
+
+}
+.fa-arrow-right{
+    cursor: pointer;
+    font-size: 20px;
+    padding: 0px;
+}
+.fa-arrow-left{
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.detailtab{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 1;
+    top:10%;
+    left:26%;
+    background-color: var(--background-color-details);
+    padding: 20px;
+    width:40rem;
+    border-radius: 20px;
+    box-shadow: 0 0 10px;
+    height: 30rem;
+}
+.detailtab::-webkit-scrollbar{
+    background-color: rgb(108, 148, 241);
+    scrollbar-face-color: grey;
+}
+.divdisc{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    padding: 5px;
+    overflow-y: scroll;
+}
+
+.detailimg{
+    aspect-ratio: 3/4;
+    height: 12rem;
+    object-fit: contain;
+}
+.detaildesc{
+    font-size: 1.1rem;
+    box-shadow: 0 0 2px black;
+    padding: 10px;
+    border-radius: 3px;
+}
+.line3{
+    display: flex;
+    align-items: stretch;
+    gap: 20px;
+}
+
+.detailprice{
+    color:green;
+    font-size: 1.5rem;
+}
+.fa-circle-xmark{
+    position: relative;
+    top:0rem;
+    right:-19rem;
+}
+.detailh3{
+    font-family: 'Poppins', sans-serif;
+
+}
+
+
+@media screen and (max-width:950px) {
+    .detailtab{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        z-index: 1;
+        top:10%;
+        left:20%;
+        background-color: var(--background-color-details);
+        padding: 20px;
+        width:15rem;
+        border-radius: 20px;
+        box-shadow: 0 0 10px;
+        height: 25rem;
+    }
+    .detailh3{
+        font-family: 'Poppins', sans-serif;
+        font-size: 15px;
+    
+    }
+    .detaildesc{
+        font-size: 0.8rem;
+        box-shadow: 0 0 2px black;
+        padding: 10px;
+        border-radius: 3px;
+    }
+    .fa-circle-xmark{
+        position: relative;
+        top:0rem;
+        right:-7rem;
+    }
+    
+}
