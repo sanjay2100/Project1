@@ -2,6 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Roboto&display=swap');
 
+body{
+  background-color: var(--background-color-body);
+}
 .App{
   width:auto;
   
@@ -28,6 +31,9 @@
   --background-color-corosel:rgb(48, 47, 47);
   --background-color-details:rgb(141, 139, 139);
 
+}
+#body{
+  background-color: var(--background-color-body);
 }
 
 
@@ -198,14 +204,14 @@ h2{
 
 .fa-sharp{
   position: relative;
-  right:-95%;
-  top:30px;
+  top:100px;
   margin: 0px;
   cursor:pointer;
+  color: black;
 }
 
-.fa-sharp:hover{
-  color: rgb(105, 103, 103);
+.fa-sharp{
+  color: rgb(158, 158, 158);
 }
 h3{
   margin: 0px;
@@ -248,8 +254,9 @@ h3{
   box-shadow: 0 0 5px black;
 }
 .des{
-  color: var(--color-primary);
+  color: black;
   text-align: center;
+  text-decoration: none;
 
 }
 .catimg{
@@ -393,6 +400,7 @@ h3{
 
 a{
   text-decoration: none;
+  color: var(--color-primary);
   border: none;
   outline: none;
 }

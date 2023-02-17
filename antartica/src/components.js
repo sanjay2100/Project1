@@ -1,16 +1,24 @@
 import React from "react";
-import { BrowserRouter, Link } from "react-router-dom";
+import {  Link } from "react-router-dom";
 import{useState} from "react";
+import './App.css'
+import { Nav } from "./productdetails";
 
 
 
-
-
-
+const SideBar=()=>{
+          
+  return (<div className="bar">
+       <ul className="barul">
+           <li className="barli">hello</li>
+       </ul>
+   </div>)
+}
 
 
 const Category=()=>{
     return(
+      <div>
       <div className='category'>
       <Link to="/electronics"><div className='container'>
         <img className='catimg' src="https://images.pexels.com/photos/325153/pexels-photo-325153.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"/>
@@ -52,6 +60,7 @@ const Category=()=>{
         <img className='catimg' src="https://images.pexels.com/photos/5910956/pexels-photo-5910956.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"/>
         <h3 className='des'>Medicine</h3>
       </div></Link>
+     </div>          
      </div>
      
     )

@@ -2,7 +2,8 @@ import React, { createElement } from "react";
 import "./category.css";
 import { Link } from "react-router-dom";
 import{BrowserRouter,Routes,Route} from "react-router-dom";
-
+import { Nav } from "./productdetails";
+import './App.css';
 
 
  
@@ -12,7 +13,7 @@ import{BrowserRouter,Routes,Route} from "react-router-dom";
 const Electronics=()=>{
     return(
         
-        
+        <div>
         <div className="ele">
             <div>
                 <h3 className="descCategory">Electronics</h3>
@@ -38,7 +39,7 @@ const Electronics=()=>{
             
         </div>
         
-        
+        </div>
     )
 }
         const Fashion=()=>{

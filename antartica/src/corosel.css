@@ -1,3 +1,15 @@
+
+[theme=Light]{
+
+    --background-color-details:rgb(246, 243, 243);
+  
+  }
+  
+  [theme=Dark]{
+
+    --background-color-details:rgb(141, 139, 139);
+  
+  }
 .coroselcontainer{
     display: flex;
     flex-direction: row;
@@ -69,7 +81,7 @@
     z-index: 1;
     top:10%;
     left:26%;
-    background-color: var(--background-color-details);
+    background-color:rgb(252, 249, 249);
     padding: 20px;
     width:40rem;
     border-radius: 20px;
@@ -120,7 +132,7 @@
 }
 
 
-@media screen and (max-width:950px) {
+@media screen and (max-width:800px) {
     .detailtab{
         display: flex;
         flex-direction: column;
@@ -129,10 +141,10 @@
         position: fixed;
         z-index: 1;
         top:10%;
-        left:20%;
+        left:10%;
         background-color: var(--background-color-details);
         padding: 20px;
-        width:15rem;
+        width:18rem;
         border-radius: 20px;
         box-shadow: 0 0 10px;
         height: 25rem;
@@ -151,7 +163,14 @@
     .fa-circle-xmark{
         position: relative;
         top:0rem;
-        right:-7rem;
+        right:-8rem;
+    }
+    .detailprice{
+        color:green;
+        font-size: 1rem;
+    }
+    .insideButton1{
+        font-size: 11px;
     }
     
 }
