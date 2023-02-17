@@ -26,12 +26,7 @@ function App() {
   
   const [Theme, NewTheme]=useState("Light")
   
-  document.addEventListener('click',function(){
-    var stat=document.querySelector('.bar').stlye.display;
-    if(stat!="none"){
-     return document.querySelector('.bar').stlye.display="none";
-    }
-  })
+  
   //for opening loginform
 
   

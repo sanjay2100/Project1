@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import{useState} from "react";
 import './App.css'
-import { Nav } from "./productdetails";
+import { CloseSidebar, Nav } from "./productdetails";
 import App from "./App"; 
 
 
@@ -18,8 +18,9 @@ const SideBar=({initial,final})=>{
       final("Light")
     }
   }    
-  return (<div className="bar" Id='bar'>
+  return (<div className="bar" id='bar'>
        <ul className="barul">
+       <i class="fa-thin fa-xmark" onClick={CloseSidebar}></i> 
            <li className="barli">hello</li>
            <li className="barli">hello</li>
            <li className="barli">hello</li>

@@ -22,7 +22,8 @@ const Cart=()=>{
         
         return(
             <div className="nav">
-                <i class="fa-solid fa-bars" onClick={openSidebar}></i>
+                
+                <i class="fa-solid fa-bars" onClick={OpenSidebar}></i>
                 
 
                 <ul className="navlist">
@@ -36,17 +37,27 @@ const Cart=()=>{
     }
 
 //sidebar
+
+
+const OpenSidebar=()=>{
+   
+   
+    return document.querySelector(".bar").style.display="flex"
+        
     
-const openSidebar=()=>{
-    document.querySelector(".bar").style.display="flex"
+}
+export const CloseSidebar=()=>{
+   
+   
+    return document.querySelector(".bar").style.display="none"
+        
     
 }
 
 export const closeSidebar=()=>{
     return document.querySelector(".bar").style.display="none"
 }
-
-     const openCart=()=>{
+const openCart=()=>{
         return (
           document.querySelector(".cartDiv").style.display="flex"
           
