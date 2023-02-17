@@ -6,14 +6,25 @@ import { Nav } from "./productdetails";
 import App from "./App"; 
 
 
-const SideBar=()=>{
-          
-  return (<div className="bar">
+const SideBar=({initial,final})=>{
+  const Click=()=>{
+    if (initial==="Light"){
+      
+        final("Dark")
+      
+    }
+    else{
+       
+      final("Light")
+    }
+  }    
+  return (<div className="bar" Id='bar'>
        <ul className="barul">
            <li className="barli">hello</li>
            <li className="barli">hello</li>
            <li className="barli">hello</li>
-           <li className="barli"><button>Theme</button></li>
+           <li className="barli"><button onClick={()=>Click()}>Theme</button>
+</li>
 
        </ul>
    </div>)

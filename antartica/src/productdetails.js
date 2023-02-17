@@ -41,10 +41,8 @@ const openSidebar=()=>{
     document.querySelector(".bar").style.display="flex"
     
 }
-const cartClose=()=>{
-    document.querySelector(".App").addEventListener('click',closeCart)
-}
-const closeSidebar=()=>{
+
+export const closeSidebar=()=>{
     return document.querySelector(".bar").style.display="none"
 }
 
@@ -55,7 +53,7 @@ const closeSidebar=()=>{
           )
       }
       
-      const closeCart=()=>{
+       const closeCart=()=>{
     
         return document.querySelector(".cartDiv").style.display="none"
          

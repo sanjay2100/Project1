@@ -9,7 +9,7 @@ import {Electronics,Fashion,Decoration,Grocery,Gardening,Toys,Sports,Stationary,
 import Details1 from './details';
 import Mobile from './mobile';
 import Home from './home';
-import { Nav } from './productdetails';
+import { closeSidebar, Nav } from './productdetails';
 import { SideBar } from './components';
 
     
@@ -24,20 +24,14 @@ function App() {
 
   //js for changing theme
   
-  const [Theme, NewTheme]=useState("Dark")
-  const Click=({Start,End})=>{
-    if (Start==="Light"){
-      return(
-        End("Dark")
-      )
-    }
-    else{
-     return  End("Light")
-    }
-  }
+  const [Theme, NewTheme]=useState("Light")
   
-  
-
+  document.addEventListener('click',function(){
+    var stat=document.querySelector('.bar').stlye.display;
+    if(stat!="none"){
+     return document.querySelector('.bar').stlye.display="none";
+    }
+  })
   //for opening loginform
 
   
@@ -48,8 +42,8 @@ function App() {
     <div className="App" theme={Theme}>
 
     <BrowserRouter>
-      <Nav/>
-      <SideBar Start={Theme} End={NewTheme} />
+      <Nav />
+      <SideBar initial={Theme} final={NewTheme}/>
           <Routes>
                     <Route exact path="/electronics" element={<Electronics/>}/>
                     <Route exact path="/" element={<Home/>}/>
