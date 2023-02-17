@@ -216,7 +216,6 @@ h2{
 h3{
   margin: 0px;
   font-size: 30px;
-  color:var(--color-primary);
 }
 .subButton{
   border-radius: 15px;
@@ -253,8 +252,8 @@ h3{
   background-color: var(--background-color-cards);
   box-shadow: 0 0 5px black;
 }
-.des{
-  color: black;
+.descat{
+  color: var(--color-primary);
   text-align: center;
   text-decoration: none;
 
@@ -279,10 +278,11 @@ h3{
   gap: 20px;
   overflow-x:scroll;
   text-decoration: none;
+  background-color: var(--background-color-body);
 }
 .body{
   padding: 0px;
-  background-color: var(--background-color-body);
+  background-color: var(--background-color-cards);
 }
 .trend{
   position:absolute;
@@ -403,6 +403,7 @@ a{
   color: var(--color-primary);
   border: none;
   outline: none;
+  height: inherit;
 }
 
 

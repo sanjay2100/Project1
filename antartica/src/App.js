@@ -10,6 +10,7 @@ import Details1 from './details';
 import Mobile from './mobile';
 import Home from './home';
 import { Nav } from './productdetails';
+import { SideBar } from './components';
 
     
    
@@ -23,18 +24,15 @@ function App() {
 
   //js for changing theme
   
-  const [Theme, NewTheme]=useState("Light")
-  const Click=({Theme,NewTheme})=>{
-    if (Theme==="Dark"){
+  const [Theme, NewTheme]=useState("Dark")
+  const Click=({Start,End})=>{
+    if (Start==="Light"){
       return(
-      NewTheme("Light"),
-      localStorage.setItem("Theme","Light")
+        End("Dark")
       )
     }
     else{
-      NewTheme("Dark")
-      localStorage.setItem("Theme","Dark")
-
+     return  End("Light")
     }
   }
   
@@ -51,6 +49,7 @@ function App() {
 
     <BrowserRouter>
       <Nav/>
+      <SideBar Start={Theme} End={NewTheme} />
           <Routes>
                     <Route exact path="/electronics" element={<Electronics/>}/>
                     <Route exact path="/" element={<Home/>}/>
@@ -76,4 +75,4 @@ function App() {
   );
 
 }
-export default App  ;
+export default App   ;

@@ -41,10 +41,11 @@ const openSidebar=()=>{
     document.querySelector(".bar").style.display="flex"
     
 }
-
-
+const cartClose=()=>{
+    document.querySelector(".App").addEventListener('click',closeCart)
+}
 const closeSidebar=()=>{
-    document.querySelector(".bar").style.display="none"
+    return document.querySelector(".bar").style.display="none"
 }
 
      const openCart=()=>{
@@ -56,7 +57,7 @@ const closeSidebar=()=>{
       
       const closeCart=()=>{
     
-        document.querySelector(".cartDiv").style.display="none"
+        return document.querySelector(".cartDiv").style.display="none"
          
     }
 

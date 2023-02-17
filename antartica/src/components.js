@@ -1,9 +1,9 @@
 import React from "react";
-import {  Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import{useState} from "react";
 import './App.css'
 import { Nav } from "./productdetails";
-
+import App from "./App"; 
 
 
 const SideBar=()=>{
@@ -11,6 +11,10 @@ const SideBar=()=>{
   return (<div className="bar">
        <ul className="barul">
            <li className="barli">hello</li>
+           <li className="barli">hello</li>
+           <li className="barli">hello</li>
+           <li className="barli"><button>Theme</button></li>
+
        </ul>
    </div>)
 }
@@ -22,7 +26,7 @@ const Category=()=>{
       <div className='category'>
       <Link to="/electronics"><div className='container'>
         <img className='catimg' src="https://images.pexels.com/photos/325153/pexels-photo-325153.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"/>
-        <h3 className='des'>electronics</h3>
+        <h3 className='descat'>electronics</h3>
       </div></Link>
       <Link to="/fashion"><div className='container'>
         <img className='catimg' src="https://images.pexels.com/photos/1536619/pexels-photo-1536619.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"/>
@@ -95,4 +99,4 @@ const Deal=()=>{
 
 
 
-export  {Category,Deal}
+export  {Category,Deal,SideBar}

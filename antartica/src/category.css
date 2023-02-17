@@ -129,7 +129,12 @@ li{
     top: 0px;
     text-align: center;
 }
-
+.ele{
+    background-color: var(--background-color-form);
+    background: var(--background-color-body);
+    height: 90.1vh;
+    padding:10px;
+}
 .cartDiv{
     list-style: none;
     position:fixed;
@@ -163,10 +168,11 @@ li{
     display: none;
     flex-direction: column;
     gap: 10px;
-    top:0px;
+    top:0rem;
     left:0%;
     width:300px;
-    z-index: 1;
+    z-index: 2;
+    height: 100%;
     background-color: var(--background-color-cards);
     border-radius: 0px 20px 20px 0px;
     box-shadow: 0 0 2px black;

@@ -1,7 +1,7 @@
 import React from "react";
 import Details1 from './details';
 import { useState } from "react";
-import './corosel.css';
+import './mobile.css'
 import './App.css';
 import { Cart, Nav } from "./productdetails";
 
@@ -16,7 +16,7 @@ const Mobile=()=>{
     }
         
         return ( 
-            <div>
+            <div className="Mobile">    
             <Details1 openD={Detail} closeD={setDetail}/> 
             <Cart/> 
             <h3 className="heading">Mobile</h3>
