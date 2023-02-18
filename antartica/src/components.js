@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 import{useState} from "react";
 import './App.css'
 import { CloseSidebar, Nav } from "./productdetails";
@@ -18,12 +18,17 @@ const SideBar=({initial,final})=>{
       final("Light")
     }
   }    
-  return (<div className="bar" id='bar'>
+  return (
+    
+  <div className="bar" id='bar'>
        <ul className="barul">
        <i class="fa-thin fa-xmark" onClick={CloseSidebar}></i> 
            <li className="barli">hello</li>
            <li className="barli">hello</li>
-           <li className="barli">hello</li>
+           
+           <li className="barli" onClick={Opencat}>Category</li>
+           <li className="barlicat"><Catlist/></li>
+           
            <li className="barli"><button onClick={()=>Click()}>Theme</button>
 </li>
 
@@ -31,7 +36,26 @@ const SideBar=({initial,final})=>{
    </div>)
 }
 
+const Opencat=()=>{
+ return document.querySelector(".barlicat").style.display="flex"
+}
+export const Closecat=()=>{
+  return document.querySelector(".barlicat").style.display="none"
+ }
 
+const Catlist=()=>{
+    return(
+    
+    <>
+    <Link to="/electronics"><h3 className="barli">Electronics</h3></Link>
+    <Link to="/fashion"><h3 className="barli">Fashion</h3></Link>
+    <Link to="/Decoration"><h3 className="barli">Decoration</h3></Link>
+    <Link to="/Grocery"><h3 className="barli">Grocery</h3></Link>
+    
+    </>
+
+  )
+}
 const Category=()=>{
     return(
       <div>

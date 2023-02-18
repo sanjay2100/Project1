@@ -18,6 +18,8 @@ body{
   --background-color-cards:rgb(180, 177, 177);
   --background-color-corosel:rgb(246, 243, 243);
   --background-color-details:rgb(246, 243, 243);
+  --background-color-hov:rgb(246, 243, 243);
+
 }
 
 [theme=Dark]{
@@ -28,7 +30,9 @@ body{
   --background-color-body: rgb(64, 65, 70);
   --background-color-cards:rgb(103, 105, 109) ;
   --background-color-corosel:rgb(48, 47, 47);
-  --background-color-details:rgb(141, 139, 139);
+  --background-color-details:rgb(46, 45, 45);
+  --background-color-hov:rgb(52, 51, 51);
+
 
 }
 #body{

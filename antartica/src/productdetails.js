@@ -5,6 +5,9 @@ import changeState from './App'
 import Details1 from './details';
 import './App.css';
 import './corosel.css'
+import { Link } from "react-router-dom";
+import { Closecat } from "./components";
+
 
 //cart design
 const Cart=()=>{
@@ -31,6 +34,7 @@ const Cart=()=>{
                     <li className="naveItem">join us</li>
                     <li className="naveItem">About us</li>
                     <li className="naveItem" onClick={openCart}><i class="fa-solid fa-cart-shopping"/></li>
+                    <Link to='/'><li className="naveItem"><i class="fa-solid fa-house"/></li></Link>
                 </ul>
             </div>
         )
@@ -49,7 +53,10 @@ const OpenSidebar=()=>{
 export const CloseSidebar=()=>{
    
    
-    return document.querySelector(".bar").style.display="none"
+    return (
+        document.querySelector(".bar").style.display="none",
+        document.querySelector(".barlicat").style.display="none"
+    )
         
     
 }

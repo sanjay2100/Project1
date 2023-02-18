@@ -1,46 +1,45 @@
-const express=require('express')
-const app=express()
-const cors=require('cors')
+const express= require('express')
 const mongoose=require('mongoose')
-const User=require("./user.models")
+
+
+const app=express()
+app.use(express.urlencoded({extended:true}))
 mongoose.set('strictQuery', true);
-mongoose.connect("mongodb://0.0.0.0:27017/Antartica-user")
-app.use(cors())
-app.use(express.json())
-
-app.get('/',(req,res)=>{
-    res.send("hello")
-})
-
-app.post('/api/login',async(req,res)=>{
-    console.log(req.body)
-    
-       const user= await User.findOne({
-            LoginId:req.body.LoginId,
-            password:req.body.password,
-        })
-        if(user){
-            return res.json({status:'ok', user:true})
-        }
-        else{
-            return res.json({status:'err',user:false})
-        }
-     })
 
 
-app.post('/api/register',async(req,res)=>{
-    console.log(req.body)
-    try {
-        await User.create({
-            LoginId:req.body.LoginId,
-            password:req.body.password,
-        })
-        res.json({status:'ok'})
 
-    } catch (error) {
-        res.json({status:'error'})
-
+mongoose.connect('mongodb://0.0.0.0:27017/antarticaDb',function(err){
+    if(err){
+        console.log(err);
+    }
+    else{
+        console.log('connected to DB');
     }
 })
+
+const UserSchema=new mongoose.Schema({
+    loginid:String,
+    password:String
+})
+
+
+const User=new mongoose.model('Userdata',UserSchema)
+
+app.get('/signup',function(req,res){
+    res.send('hello')
+})
+
+
+app.post('/signup',function(req,res){
+
+    var lid=req.body.loginId
+    var Pwd=req.body.Pwd
+    console.log(lid);
+
+})
+
+
+
+
 
 app.listen(3001,console.log("connected through port 3001"))

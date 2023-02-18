@@ -5,3 +5,13 @@
 .detailtab{
 background-color: var(--background-color-details);
 }
+
+.heading{
+    color: var(--color-primary);
+}
+.namecontainer{
+    display: flex;
+    align-items: center;
+    gap:20px
+}
+

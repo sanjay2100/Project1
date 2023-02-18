@@ -7,6 +7,7 @@ import {Login,Signup} from './Login';
 import {Cart} from "./productdetails";
 import Corosel from './corosel';
 import { Electronics } from "./category";
+import Footer from "./footer";
 const Home=()=>{
     
 
@@ -42,7 +43,11 @@ return(
         <Category/>
         
         <Corosel/>
+        <Corosel/>
+        <Corosel/>
+
         </div>
+        <Footer/>
         </div>
 
     )

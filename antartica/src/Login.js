@@ -26,7 +26,7 @@ const data=await response.json()
     if(!openL) return null
     
    return (
-            <form onSubmit={loginUser}>
+            <form onSubmit={loginUser} action='/signin' method="POST">
             <div className="LoginForm" >
                 <i class="fa-sharp fa-solid fa-circle-xmark" onClick={()=>closeL(false)}></i>
                 <h3 className="headingL">LOGIN</h3>
@@ -78,7 +78,7 @@ async function registerUser(e){
     
    return (
             
-            <form onSubmit={registerUser}>
+            <form onSubmit={registerUser}action='/signup' method="POST">
             <div className="LoginForm" >
                 <i class="fa-sharp fa-solid fa-circle-xmark" onClick={()=>closeS(false)}></i>
                 <h3 className="headingL">Siginup</h3>

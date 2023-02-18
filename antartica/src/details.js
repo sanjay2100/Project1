@@ -1,6 +1,5 @@
 import React from "react";
 import './corosel.css'
-import './App.css';
 import { openCart } from "./productdetails";
 
 
@@ -33,7 +32,7 @@ const Details1=({openD,closeD})=>{
     
     return(
         <div className="detailtab">
-        <i class="fa-sharp fa-solid fa-circle-xmark" onClick={()=>closeD(false)}></i>
+        <i class="fa-solid fa-xmark" onClick={()=>closeD(false)}></i>
         <h1 className="detailh3">Samsung galaxy s23 Ultra</h1>
         <img className="detailimg" src='https://images.samsung.com/is/image/samsung/assets/in/smartphones/galaxy-s23/buy/720X720_1.jpg'/>
         <div className="line3">

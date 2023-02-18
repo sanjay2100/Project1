@@ -1,15 +1,5 @@
 
-[theme=Light]{
 
-    --background-color-details:rgb(246, 243, 243);
-  
-  }
-  
-  [theme=Dark]{
-
-    --background-color-details:rgb(141, 139, 139);
-  
-  }
 .coroselcontainer{
     display: flex;
     flex-direction: row;
@@ -52,6 +42,7 @@
     background-color: aliceblue;
     align-items: center;
     padding: 0px;
+    margin: 10px 0px 10px 0px;
     
 }
 .arrowdesc{
@@ -106,6 +97,7 @@
     object-fit: contain;
 }
 .detaildesc{
+    color: var(--color-primary);
     font-size: 1.1rem;
     box-shadow: 0 0 2px black;
     padding: 10px;
@@ -121,16 +113,18 @@
     color:green;
     font-size: 1.5rem;
 }
-.fa-circle-xmark{
-    position: relative;
-    top:1rem;
-    right:-24rem;
-}
+
 .detailh3{
     font-family: 'Poppins', sans-serif;
+    color: var(--color-primary);
 
 }
-
+.fa-xmark{
+    position:relative;
+    top:0px;
+    right:-18.5rem;
+    cursor: pointer;
+}
 
 @media screen and (max-width:800px) {
     .detailtab{
