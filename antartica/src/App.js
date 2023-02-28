@@ -11,6 +11,8 @@ import Mobile from './mobile';
 import Home from './home';
 import { closeSidebar, Nav } from './productdetails';
 import { SideBar } from './components';
+import Team from './team/team';
+import Career from './career/career';
 
     
    
@@ -52,6 +54,8 @@ function App() {
                     <Route exact path="/Stationary" element={<Stationary/>}/>
                     <Route exact path="/Spares" element={<Spares/>}/>
                     <Route exact path="/Medicine" element={<Medicine/>}/>
+                    <Route exact path="/Team" element={<Team/>}/>
+                    <Route exact path="/Careers" element={<Career/>}/>
 
           </Routes>      
         

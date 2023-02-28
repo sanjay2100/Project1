@@ -1,45 +1,54 @@
-const express= require('express')
+const http=require('http');
+const express=require('express')
 const mongoose=require('mongoose')
 
 
-const app=express()
-app.use(express.urlencoded({extended:true}))
+const app=express();
 mongoose.set('strictQuery', true);
+mongoose.connect('mongodb://0.0.0.0:27017/antarticaDB')
 
+app.use(express.urlencoded({extended:true}))
 
-
-mongoose.connect('mongodb://0.0.0.0:27017/antarticaDb',function(err){
-    if(err){
-        console.log(err);
-    }
-    else{
-        console.log('connected to DB');
-    }
+const Schema=new mongoose.Schema({
+    UserID:String,
+    Password:String,
 })
 
-const UserSchema=new mongoose.Schema({
-    loginid:String,
-    password:String
+const Model=mongoose.model('register',Schema)
+
+
+
+
+app.get('/register',function (req,res) {
+    Model.find(function(err,result){
+        res.send(result)
+    })
 })
 
+app.post('/register',function(req,res){
+    
+    
+    const data= new Model({
+        UserID:req.body.loginId, 
+        Password:req.body.Pwd,
+    });
 
-const User=new mongoose.model('Userdata',UserSchema)
-
-app.get('/signup',function(req,res){
-    res.send('hello')
+    data.save(function(err){
+        if(!err){
+            res.send("Data added sucessfully")
+        }
+        else{
+            res.send(err)
+        }
+    })
+        
 })
-
-
-app.post('/signup',function(req,res){
-
-    var lid=req.body.loginId
-    var Pwd=req.body.Pwd
-    console.log(lid);
-
-})
+    
 
 
 
 
 
-app.listen(3001,console.log("connected through port 3001"))
+
+
+app.listen(3001,console.log('connected through port 3001'))

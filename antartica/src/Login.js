@@ -78,7 +78,7 @@ async function registerUser(e){
     
    return (
             
-            <form onSubmit={registerUser}action='/signup' method="POST">
+            <form action='/signup' method="POST" onSubmit={registerUser}>
             <div className="LoginForm" >
                 <i class="fa-sharp fa-solid fa-circle-xmark" onClick={()=>closeS(false)}></i>
                 <h3 className="headingL">Siginup</h3>

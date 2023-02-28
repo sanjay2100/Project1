@@ -19,6 +19,9 @@ body{
   --background-color-corosel:rgb(246, 243, 243);
   --background-color-details:rgb(246, 243, 243);
   --background-color-hov:rgb(246, 243, 243);
+  --color-footer:rgb(9, 9, 9);
+  --background-color-footer:rgb(224, 237, 128);
+
 
 }
 
@@ -32,6 +35,9 @@ body{
   --background-color-corosel:rgb(48, 47, 47);
   --background-color-details:rgb(46, 45, 45);
   --background-color-hov:rgb(52, 51, 51);
+  --color-footer:rgb(244, 236, 236);
+  --background-color-footer:rgb(33, 31, 73);
+
 
 
 }

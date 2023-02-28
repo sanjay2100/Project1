@@ -7,7 +7,7 @@ import {Login,Signup} from './Login';
 import {Cart} from "./productdetails";
 import Corosel from './corosel';
 import { Electronics } from "./category";
-import Footer from "./footer";
+import Footer from "./footer/footer";
 const Home=()=>{
     
 
