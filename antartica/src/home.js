@@ -35,7 +35,7 @@ return(
      <div id='body' className='body'>
      <Cart/>
 
-        <div className='FASHION'>
+        <div className='FASHIONBOX'>
             <img className='fashion' src='https://www.apple.com/newsroom/images/product/iphone/standard/Apple-iPhone-14-iPhone-14-Plus-hero-220907_Full-Bleed-Image.jpg.large.jpg'/>
             <img className='fashion' src='https://www.techspot.com/articles-info/2295/images/2021-07-20-image-2.jpg'/>
             <h2 className='trend'>Explore latest Technology</h2>

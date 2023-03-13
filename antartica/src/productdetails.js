@@ -13,9 +13,14 @@ import { Closecat } from "./components";
 const Cart=()=>{
 
     return (<div className="cartDiv">
-            <i onClick={closeCart}>x</i>
+            <i className="xcart" onClick={closeCart}>x</i>
             <h3 className="cartname">cart</h3>
-            <ul className="cartul"></ul>
+            <ul className="cartul">
+                <div className="cartinner">
+                    <li className="cartName"></li>
+                    <li className="cartprice"></li>
+                </div>
+            </ul>
             <a herf="Purchase.js"><button>Make Purchase</button></a>
         </div>)
      }
@@ -28,7 +33,6 @@ const Cart=()=>{
                 
                 <i class="fa-solid fa-bars" onClick={OpenSidebar}></i>
                 
-
                 <ul className="navlist">
                     <li className="naveItem">Whats New</li>
                     <li className="naveItem">join us</li>
@@ -94,11 +98,19 @@ function addtoCart(event) {
     var button=event.target
     var card=button.parentElement.parentElement
     var item=card.querySelector(".itemName").innerHTML
+    var price=card.querySelector(".detailprice").innerHTML
     var ul=document.querySelector(".cartul")
-    var li=document.createElement("li")
-    li.classList.add("cartitem")
-    li.innerText=item
-    ul.appendChild(li)
+    var div=document.createElement("div")
+    div.classList.add("cartinner")
+    var liname=document.createElement("li")
+    var liprice=document.createElement("li")
+    liname.classList.add("cartitem")
+    liprice.classList.add("cartitem")
+    liname.innerText=item
+    liprice.innerText=price
+    div.appendChild(liname)
+    div.appendChild(liprice)
+    ul.appendChild(div)
 }
 
 export {Cart,openCart,Nav,addtoCart}

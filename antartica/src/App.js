@@ -7,7 +7,7 @@ import{BrowserRouter, Routes, Route,Link} from "react-router-dom";
 import {Login,Signup} from './Login';
 import {Electronics,Fashion,Decoration,Grocery,Gardening,Toys,Sports,Stationary,Spares,Medicine} from "./category";
 import Details1 from './details';
-import Mobile from './mobile';
+import {Mobile,Computer} from './mobile';
 import Home from './home';
 import { closeSidebar, Nav } from './productdetails';
 import { SideBar } from './components';
@@ -45,6 +45,7 @@ function App() {
                     <Route exact path="/electronics" element={<Electronics/>}/>
                     <Route exact path="/" element={<Home/>}/>
                     <Route path="/mobile" element={<Mobile/>}/>
+                    <Route path="/Computers" element={<Computer/>}/>
                     <Route exact path="/fashion" element={<Fashion/>}/>
                     <Route exact path="/Decoration" element={<Decoration/>}/>
                     <Route exact path="/Grocery" element={<Grocery/>}/>
