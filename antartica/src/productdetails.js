@@ -97,8 +97,8 @@ function addtoCart(event) {
     console.clear()
     var button=event.target
     var card=button.parentElement.parentElement
-    var item=card.querySelector(".itemName").innerHTML
-    var price=card.querySelector(".detailprice").innerHTML
+    var item=card.querySelector(".CardTitle").innerHTML
+    var price=card.querySelector(".CardPrice").innerHTML
     var ul=document.querySelector(".cartul")
     var div=document.createElement("div")
     div.classList.add("cartinner")

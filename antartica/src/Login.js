@@ -35,7 +35,7 @@ const Signup =({openS,closeS})=>{
 
     const [UserID,setUserID]=useState("")
     const[Pwd,setPwd]=useState("")
-
+    const[err,seterr]=useState("")
  const Register=(e)=>{
     e.preventDefault()
     fetch ('http://localhost:3001/register',{
@@ -47,8 +47,14 @@ const Signup =({openS,closeS})=>{
         UserID,
         Pwd
     })
-})
- } 
+    })
+
+    .then((response)=>{
+        const data=response.json()
+        console.log(data)
+    })
+   
+ }
 
 
     if(!openS) return null
@@ -60,6 +66,7 @@ const Signup =({openS,closeS})=>{
                 <i class="fa-sharp fa-solid fa-circle-xmark" onClick={()=>closeS(false)}></i>
                 <h3 className="headingL">Siginup</h3>           
             <input className="textbox" type="text" onChange={(e)=>setUserID(e.target.value)}  placeholder="Enter your Login Id"/>
+            
             <input className="textbox" type="password"  onChange={(e)=>setPwd(e.target.value)} placeholder="Enter your Password"/>
             <button type="submit" className="subButton">Create Account</button>
             

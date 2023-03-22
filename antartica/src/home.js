@@ -36,8 +36,7 @@ return(
      <Cart/>
 
         <div className='FASHIONBOX'>
-            <img className='fashion' src='https://www.apple.com/newsroom/images/product/iphone/standard/Apple-iPhone-14-iPhone-14-Plus-hero-220907_Full-Bleed-Image.jpg.large.jpg'/>
-            <img className='fashion' src='https://www.techspot.com/articles-info/2295/images/2021-07-20-image-2.jpg'/>
+            <img className='fashion' src='https://www.pngmart.com/files/15/Apple-iPhone-12-PNG-Free-Download.png'/>
             <h2 className='trend'>Explore latest Technology</h2>
         </div>
         <Category/>

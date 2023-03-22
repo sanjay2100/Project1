@@ -49,12 +49,12 @@ const Electronics=()=>{
                         <h3 className="descCategory">Fashion</h3>
                         <div>
                             <ul className="catul">
-                                <li className="catli">Men's fashion
+                            <Link to="/men"><li className="catli">Men's fashion
                                     <img className="catImg" src="https://m.media-amazon.com/images/I/618Wek95laS._AC._SR360,460.jpg"/>
-                                </li>
-                                <li className="catli">Women's fashion
+                                </li></Link>
+                                <Link to="/women"> <li className="catli">Women's fashion
                                     <img className="catImg" src="https://i.pinimg.com/564x/98/78/e3/9878e3c17335f78093ba17a9640cb3f5.jpg"/>
-                                </li>
+                                </li></Link>
                                 <li className="catli">Beauty and grooming
                                     <img className="catImg" src="https://images.pexels.com/photos/3993398/pexels-photo-3993398.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"/>
                                 </li>

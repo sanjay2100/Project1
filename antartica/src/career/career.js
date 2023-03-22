@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import './career.css'
 
 
@@ -19,90 +19,93 @@ function Heading(Event){
 const Career=(e)=>{
 const [Post,setPost]=useState(false)
 const[apply,setapply]=useState(false)
+const[job,setJob]=useState([])
+useEffect(()=>
+    {
+     const data=fetch("http://localhost:3001/Joblist")
+    .then((response)=>response.json())
+    .then((data)=>setJob(data))},[])
+    console.log(job)
+
+    
     return(
-        <div>
         
-        <div className="career">
-            <button className="jobpost" onClick={()=>setPost('true')}>Post a job</button>
-            <h2 className="Cheading">Careers</h2>
-            <div className="careerbody">
-                <div className="careercont">
-                    <h2 className="jobtitle">Yaaru venaalum</h2>
-                    <p className="jd">Onnu Solraku illa neengala paathu pudichiruntha vaanga</p>
-                    <button className="careerbutton" onClick={()=>setapply(true)} >Apply Now</button>
-                </div>
-                <div className="careercont">
-                    <h2 className="jobtitle">Driver</h2>
-                    <p className="jd">Effecient drivers needed need to overtake Vin Diesel if required. If situation arises they should be ready to drive aeroplane Jet and Cycle</p>
-                    <button className="careerbutton">Apply Now</button>
-                </div>
-                <div className="careercont">
-                    <h2 className="jobtitle">Helper</h2>
-                    <p className="jd">Need to push the ship if it breaksdown in the Midsea!!</p>
-                    <button className="careerbutton">Apply Now</button>
-                </div>
-
+        <div>
+            <div className="career">
+                <button className="jobpost" onClick={()=>setPost('true')}>Post a job</button>
+                <h2 className="Cheading">Careers</h2>
+                <div className="careerbody">
+                
+        {job.map((value)=>{
+            return(
+            
+                    <div className="careercont">
+                        <h2 className="jobtitle">{value.JobName}</h2>
+                        <p className="jd">{value.Desc}</p>
+                        <button className="careerbutton" onClick={()=>setapply(true)} >Apply Now</button>
+                    </div>
+                
+                
+            )
+        })}
+        </div>
             </div>
+        
+        
             <Postajob openPost={Post} closePost={setPost}/>
-            <Application open={apply} close={setapply}/>
+            <Application openApp={apply} closeApp={setapply}/>
 
         </div>
-        </div>
+    
     )
 }
 
 //Post a job
 const Postajob=({openPost,closePost})=>{
+    const [jobTitle,setJobtitle]=useState("")
+    const[jobDesc,setjobDes]=useState("")
+    const postThis=()=>{
+    
+        fetch("http://localhost:3001/Career",{
+            method:"POST",
+            headers:{
+                "Content-type":"application/json"
+            },
+            body:JSON.stringify({
+                jobTitle,
+                jobDesc
+            })
+    
+        })
+        
+           
+    }
     if(!openPost) return null
     else{
         return(
         <div className="HRpannel">
             <h3 onClick={()=>closePost(false)}>x</h3>
             <label>JobTitle</label>
-            <input className="JTInput"/>
+            <input className="JTInput" onChange={(e)=>setJobtitle(e.target.value)}/>
             <label>Job Description</label>
-            <textarea rows='5' cols='6' className="JDInput"/>
+            <textarea rows='5' cols='6' className="JDInput" onChange={(e)=>setjobDes(e.target.value)}/>
             <button onClick={postThis}  className="jobpostin">Post Job</button>
         </div>
     )
         }   
 }
-const postThis=({closePost})=>{
-    
-    var newJT=document.querySelector(".JTInput").value
-    var newJD=document.querySelector(".JDInput").value
-    var div=document.createElement('div')
-    var container=document.querySelector('.careerbody')
-    var cbutton=document.createElement('button')
-    cbutton.classList.add("careerbutton")
-    div.classList.add("careercont") 
-    var h=document.createElement('h2')
-    var p=document.createElement('p')
-    h.classList.add("jobtitle")
-    p.classList.add("jd")
-    h.innerHTML=newJT
-    p.innerHTML=newJD
-    cbutton.innerHTML="Apply Now"
-    console.log(cbutton);
-    div.appendChild(h)
-    div.appendChild(p)
-    div.appendChild(cbutton)
-    container.appendChild(div)
-    
-       
-}
+
 
 
 //Apply now
 
 
- const Application=({open,close})=>{
-    if(!open) return null
+ const Application=({openApp,closeApp})=>{
+    if(!openApp) return null
     
     return(
         <div>
             <form action='/apply' method="POST" className="Application">
-                <h3 className="jobApply"></h3>
                 <div className="subdiv">
                     <label>Name</label>
                     <input type='text' name="Name" placeholder="Enter your Name"/>

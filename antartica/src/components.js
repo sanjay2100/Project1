@@ -29,9 +29,8 @@ const SideBar=({initial,final})=>{
            
            <li className="barli" onClick={Opencat}>Category</li>
            <li className="barlicat"><Catlist/></li>
-           
-           <li className="barli"><button onClick={()=>Click()}>Theme</button>
-</li>
+           <Link to='/addProducts'><li className="barli">Add Products</li></Link>
+           <li className="barli"><button onClick={()=>Click()}>Theme</button></li>
 
        </ul>
    </div>)
@@ -52,6 +51,7 @@ const Catlist=()=>{
     <Link to="/fashion"><h3 className="barli">Fashion</h3></Link>
     <Link to="/Decoration"><h3 className="barli">Decoration</h3></Link>
     <Link to="/Grocery"><h3 className="barli">Grocery</h3></Link>
+    
     
     </>
 

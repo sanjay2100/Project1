@@ -7,9 +7,9 @@ import{BrowserRouter, Routes, Route,Link} from "react-router-dom";
 import {Login,Signup} from './Login';
 import {Electronics,Fashion,Decoration,Grocery,Gardening,Toys,Sports,Stationary,Spares,Medicine} from "./category";
 import Details1 from './details';
-import {Mobile,Computer} from './mobile';
+import {Addproduct, Mobile,Computer,Men,Women} from './mobile';
 import Home from './home';
-import { closeSidebar, Nav } from './productdetails';
+import { Cart, closeSidebar, Nav } from './productdetails';
 import { SideBar } from './components';
 import Team from './team/team';
 import Career from './career/career';
@@ -40,12 +40,11 @@ function App() {
 
     <BrowserRouter>
       <Nav />
+      <Cart/>
       <SideBar initial={Theme} final={NewTheme}/>
           <Routes>
                     <Route exact path="/electronics" element={<Electronics/>}/>
                     <Route exact path="/" element={<Home/>}/>
-                    <Route path="/mobile" element={<Mobile/>}/>
-                    <Route path="/Computers" element={<Computer/>}/>
                     <Route exact path="/fashion" element={<Fashion/>}/>
                     <Route exact path="/Decoration" element={<Decoration/>}/>
                     <Route exact path="/Grocery" element={<Grocery/>}/>
@@ -57,6 +56,11 @@ function App() {
                     <Route exact path="/Medicine" element={<Medicine/>}/>
                     <Route exact path="/Team" element={<Team/>}/>
                     <Route exact path="/Careers" element={<Career/>}/>
+                    <Route exact path="/addProducts" element={<Addproduct/>}/>
+                    <Route exact path="/mobile" element={<Mobile/>}/>
+                    <Route exact path="/computers" element={<Computer/>}/>
+                    <Route exact path="/men" element={<Men/>}/>
+                    <Route exact path="/women" element={<Women/>}/>
 
           </Routes>      
         
